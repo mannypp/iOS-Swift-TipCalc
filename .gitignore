@@ -1,0 +1,5 @@
+.gitignore
+.DS_Store
+TipCalc2.xcodeproj/project.xcworkspace/xcuserdata/
+TipCalc2.xcodeproj/xcuserdata/
+

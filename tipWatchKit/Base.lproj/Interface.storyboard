@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tipWatchKit" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="m5k-xg-bVo">
+                            <items>
+                                <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="Tip Calculator" textAlignment="center" id="ibL-Ke-RQs"/>
+                                <label width="1" height="0.80000000000000004" alignment="center" verticalAlignment="center" text="?" textAlignment="center" id="17W-di-Uh0">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="tipData" destination="17W-di-Uh0" id="f1T-hw-Kvz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="252" y="324"/>
+        </scene>
+    </scenes>
+</document>
