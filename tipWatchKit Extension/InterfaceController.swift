@@ -13,8 +13,6 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     @IBOutlet var tipData: WKInterfaceLabel!
     
-    var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.manny.tipCalcWatchKit")!
-    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -34,8 +32,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func updateTipData() {
-        userDefaults.synchronize()
-        let tipInfo = userDefaults.stringForKey("watchOutput")
+        let tipInfo = XXX; //userDefaults.stringForKey("watchOutput")
         if (tipInfo != nil) {
             tipData.setText(tipInfo)
         }

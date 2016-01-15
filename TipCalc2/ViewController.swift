@@ -24,8 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     var actualTaxPercent:Double = 0.0
     var lastResult:Dictionary<Int, (tipAmt:Double, totalAmt:Double)> = [:]
     
-    var userDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.manny.tipCalcWatchKit")!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,9 +87,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         
         tableView.reloadData()
-        
-        userDefaults.setObject(output.text, forKey: "watchOutput");
-        userDefaults.synchronize();
     }
     
     func showAlert(message:String) {

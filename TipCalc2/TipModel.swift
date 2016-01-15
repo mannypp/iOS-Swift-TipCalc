@@ -160,4 +160,28 @@ class TipModel {
         let entity = NSEntityDescription.insertNewObjectForEntityForName("TipPercentage", inManagedObjectContext: moc) as! TipPercentage
         entity.setValue(pct, forKey: "percentage")
     }
+    
+    func addEntityWatchData(data:String, moc:NSManagedObjectContext) {
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("WatchData", inManagedObjectContext: moc) as! WatchData
+        entity.setValue(data, forKey: "tipData")
+    }
+    
+    func updateWatchData(data:String) {
+        let moc = getManagedObjectContext()
+        let watchDataFetch = NSFetchRequest(entityName: "WatchData")
+        
+        do {
+            let fetchedWatchData = try moc.executeFetchRequest(watchDataFetch) as! [WatchData]
+            if (fetchedWatchData.count == 0) {
+                addEntityWatchData(data, moc)
+            }
+            else {
+                fetchedWatchData[0].setValue(data, forKey:"tipData")
+            }
+
+            try moc.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
 }

@@ -23,6 +23,7 @@
 		218A75D11C44A618006843EF /* tipWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 218A75B71C44A618006843EF /* tipWatchKit.app */; };
 		21A1435B1C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21A143591C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld */; };
 		21A1435F1C41AC36003246A8 /* TipPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1435D1C41AC36003246A8 /* TipPercentage.swift */; };
+		A3C5D2141C4946FD00979C9B /* WatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5D2131C4946FD00979C9B /* WatchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		218A75DC1C44B296006843EF /* tipWatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "tipWatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		21A1435A1C41A6A9003246A8 /* TipPercentageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TipPercentageModel.xcdatamodel; sourceTree = "<group>"; };
 		21A1435D1C41AC36003246A8 /* TipPercentage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipPercentage.swift; sourceTree = "<group>"; };
+		A3C5D2131C4946FD00979C9B /* WatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				21A143591C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld */,
 				21A1435D1C41AC36003246A8 /* TipPercentage.swift */,
 				2166D1FA1C25A43000B21676 /* TipModel.swift */,
+				A3C5D2131C4946FD00979C9B /* WatchData.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C5D2141C4946FD00979C9B /* WatchData.swift in Sources */,
 				21A1435B1C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld in Sources */,
 				2166D1FB1C25A43000B21676 /* TipModel.swift in Sources */,
 				2166D1EB1C259DBD00B21676 /* ViewController.swift in Sources */,
