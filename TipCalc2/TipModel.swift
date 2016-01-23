@@ -173,7 +173,7 @@ class TipModel {
         do {
             let fetchedWatchData = try moc.executeFetchRequest(watchDataFetch) as! [WatchData]
             if (fetchedWatchData.count == 0) {
-                addEntityWatchData(data, moc)
+                addEntityWatchData(data, moc: moc)
             }
             else {
                 fetchedWatchData[0].setValue(data, forKey:"tipData")
@@ -182,6 +182,17 @@ class TipModel {
             try moc.save()
         } catch {
             fatalError("Failure to save context: \(error)")
+        }
+    }
+    
+    func getWatchData() -> String {
+        let watchDataFetch = NSFetchRequest(entityName: "WatchData")
+        
+        do {
+            let fetchedWatchData = try getManagedObjectContext().executeFetchRequest(watchDataFetch) as! [WatchData]
+            return fetchedWatchData.count > 0 ? fetchedWatchData[0].tipData! : "No Data"
+        } catch {
+            fatalError("Failed to fetch watch data: \(error)")
         }
     }
 }

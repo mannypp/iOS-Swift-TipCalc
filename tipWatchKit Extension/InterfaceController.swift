@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import CoreData
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var tipData: WKInterfaceLabel!
@@ -31,10 +31,24 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    func getManagedObjectContext() -> NSManagedObjectContext {
+        let appDelegate = UI.sharedApplication().delegate as! AppDelegate
+        return appDelegate.managedObjectContext
+    }
+
     func updateTipData() {
-        let tipInfo = XXX; //userDefaults.stringForKey("watchOutput")
-        if (tipInfo != nil) {
-            tipData.setText(tipInfo)
+        let tipInfo = getWatchData()
+        tipData.setText(tipInfo)
+    }
+
+    func getWatchData() -> String {
+        let watchDataFetch = NSFetchRequest(entityName: "WatchData")
+        
+        do {
+            let fetchedWatchData = try getManagedObjectContext().executeFetchRequest(watchDataFetch) as! [WatchData]
+            return fetchedWatchData.count > 0 ? fetchedWatchData[0].tipData! : "No Data"
+        } catch {
+            fatalError("Failed to fetch watch data: \(error)")
         }
     }
 }

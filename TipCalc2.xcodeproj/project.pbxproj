@@ -23,6 +23,7 @@
 		218A75D11C44A618006843EF /* tipWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 218A75B71C44A618006843EF /* tipWatchKit.app */; };
 		21A1435B1C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21A143591C41A6A9003246A8 /* TipPercentageModel.xcdatamodeld */; };
 		21A1435F1C41AC36003246A8 /* TipPercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A1435D1C41AC36003246A8 /* TipPercentage.swift */; };
+		21B3961F1C499A5700F67BCD /* WatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3961E1C499A5600F67BCD /* WatchData.swift */; };
 		A3C5D2141C4946FD00979C9B /* WatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5D2131C4946FD00979C9B /* WatchData.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		218A75DC1C44B296006843EF /* tipWatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "tipWatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		21A1435A1C41A6A9003246A8 /* TipPercentageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TipPercentageModel.xcdatamodel; sourceTree = "<group>"; };
 		21A1435D1C41AC36003246A8 /* TipPercentage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipPercentage.swift; sourceTree = "<group>"; };
+		21B3961E1C499A5600F67BCD /* WatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchData.swift; sourceTree = "<group>"; };
 		A3C5D2131C4946FD00979C9B /* WatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				218A75CA1C44A618006843EF /* ExtensionDelegate.swift */,
 				218A75CC1C44A618006843EF /* Assets.xcassets */,
 				218A75CE1C44A618006843EF /* Info.plist */,
+				21B3961E1C499A5600F67BCD /* WatchData.swift */,
 			);
 			path = "tipWatchKit Extension";
 			sourceTree = "<group>";
@@ -259,7 +262,7 @@
 				TargetAttributes = {
 					2166D1E41C259DBD00B21676 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = ABCJAA6U96;
+						DevelopmentTeam = Q3BM7G6PYK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -356,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218A75CB1C44A618006843EF /* ExtensionDelegate.swift in Sources */,
+				21B3961F1C499A5700F67BCD /* WatchData.swift in Sources */,
 				218A75C91C44A618006843EF /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +497,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalc2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Manny.TipCalc2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manny.TipCalc2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -508,7 +512,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalc2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Manny.TipCalc2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Manny.TipCalc2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

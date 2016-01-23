@@ -87,6 +87,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         
         tableView.reloadData()
+        
+        tipModel.updateWatchData(output.text);
     }
     
     func showAlert(message:String) {
